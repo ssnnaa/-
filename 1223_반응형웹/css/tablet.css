@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+@media screen and (min-width:708px) and (max-width:1024px) {
+
+  img{width:100%;}
+  header{height:170px;}
+
+  .h_top{width:100%;}
+
+  .h_top > h1{
+    position:absolute;
+    left:10px; top:30px;
+  }
+
+  .h_top > h1 img{width:90%;}
+
+
+
+  header fieldset{
+    position:absolute;
+    right:-10px; top:60px;
+  }
+
+  .h_top > .lnb{
+    position:absolute; right:0px; top:20px;
+  }
+
+  .lnb > ul{
+    width:300px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .lnb > ul a{
+    font-size:13px;
+    color:#fff;
+  }
+
+
+  .h_bottom > .gnb{
+    width:90%;
+    position: absolute;
+    bottom:0px;
+  }
+
+  .h_bottom > .gnb > ul{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .h_bottom > .gnb > ul > li{
+    line-height:190%;
+    text-align:center;
+    padding:0px 3.3%;
+    position: relative;
+  }
+  
+  .h_bottom > .gnb > ul > li > a{
+    font-size: 16px;
+    color:#fff;
+    font-weight: 400;
+  }
+
+  .h_bottom > .gnb > ul > li > a::after{
+    width:1px; height:14px;
+    background-color: #ccc;
+    content:"";
+    display:block;
+    position:relative; top:-20px; left:70px;
+  }
+
+  .h_bottom > .gnb > ul > li:nth-child(2) > a::after{left:80px;}
+  .h_bottom > .gnb > ul > li:nth-child(3) > a::after{left:60px;}
+  .h_bottom > .gnb > ul > li:nth-child(4) > a::after{left:50px;}
+  .h_bottom > .gnb > ul > li:nth-child(5) > a::after{left:70px;}
+  .h_bottom > .gnb > ul > li:nth-child(6) > a::after{left:100px;}
+  .h_bottom > .gnb > ul > li:last-child > a::after{display:none;}
+
+  /* 토글버튼 나오게 하기 */
+  .total_btn{
+    display: block;
+    font-size: 2rem;
+    color:#fff;
+    position: absolute;
+    bottom:8px; right:20px;
+    padding:5px;
+    z-index: 10000;
+  }
+
+
+
+  /* 서브메뉴 */
+  .sub{
+    position:absolute; left:0px; top:39px;
+    width:100%; height:240px;
+    text-align: center;
+    background: rgba(255,255,255,0.8);
+    padding:15px 0px;
+    display: none;
+  }
+  .sub > li{line-height: 260%;}
+  .sub > li > a{font-size: 0.8rem;}
+  .gnb > ul > li:first-child .sub{
+    padding-left: 300px;left:-300px;
+  }
+  
+  .gnb > ul > li:nth-child(6) .sub{
+    padding-right:300px;right:0px;
+  }
+
+  .gnb:hover .sub{display: block;} /*#toggle:checked + header .sub{display:block;}*/
+
+
+/* 메인서식 */
+main > .slide img{
+  /* width:100%;
+  transform:scale(1.5); */
+  height:600px;
+  /* transform: translateX(-50px;); */
+  object-fit:cover; /*이미지 크기 비율을 높이기준으로 맞춤(가로가 잘림)*/
+}
+/* 사료무료체험 */
+@media screen and (min-width:1000px) and (max-width:1024px) {
+  .free_ex article > img{
+    padding:80px 0px 0px 9% !important;
+    width:340px;
+  }
+  .product > li{
+    width:43% !important;
+  }
+  .product li img{
+    width:250px !important;
+  }
+  .s_img{
+    padding:120px 9% 0px 0% !important;
+  }
+  .story_left{
+    padding-left:16% !important;
+  }
+}
+.free_ex{
+  height:530px;
+}
+.free_ex article > h2{display: none;}
+.free_ex article > img{
+  float:left;
+  padding:80px 0px 0px 3%;
+  width:360px;
+}
+.free_ex_right{
+  text-align: center;
+  padding-top:50px;
+  color:#fff;
+}
+.free_ex_right > h2{
+  font-size: 34px;
+  font-weight: 200;
+  padding-top:30px;
+  padding-bottom: 16px;
+}
+.free_ex_right > h2 > img{
+  padding-bottom:10px;
+  width:60px;
+}
+.free_ex_right p{
+  font-size:1.125rem;
+  line-height:180%;
+  padding:50px 0px 90px 0px;
+}
+.button{
+  font-size:1rem;
+  background: #fff;
+  padding:6px 30px;
+  border:1px solid #ccc;
+}
+
+/* 쇼핑하기 */
+.shop{
+  padding-bottom:50px;
+}
+
+.shop > h2{
+  text-align: center;
+  font-size:36px;
+  padding:60px 0px 60px 0px;
+  font-weight:200;
+}
+.shop > h2 > img{
+  width:40px;
+  padding-right:10px;
+  transform: translateY(8px);
+}
+.p_center{
+  text-align:center;
+  margin-bottom:130px;
+}
+
+/* 상품목록 */
+.product{
+  display: flex;
+  justify-content: space-around;
+}
+.product > li{
+  width:50%;
+  text-align: center;
+}
+.product > li img{
+  width:220px;
+  float:left;
+}
+.info{
+  width:150px;
+  float:right;
+  font-size:1rem;
+}
+.info > h3{
+  font-weight:500;
+  font-size:1rem;
+}
+.info > p{
+  line-height:240%;
+}
+.info > .price{
+  padding-top: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  color:#f00;
+  display:inline-block;
+}
+.info > p:last-of-type{
+  padding:20px 0px 0px 0px;
+}
+
+/* 펫스토리 서식 */
+.story{
+  width:100%;
+  background:#f0f0f0;
+  height:620px;
+}
+
+.story > h2{
+  display:none;
+}
+.story > article > h2{
+  font-size: 2.25rem;
+  color:#333;
+  font-weight:200;
+  padding-top:120px;
+  padding-bottom:60px;
+}
+.story_left{
+  float:left;
+  text-align: center;
+  padding-left: 50px;
+}
+.story_left > h2{
+  font-size: 2.25rem;
+  color:#333;
+  font-weight: 200;
+  padding-top:140px;
+  padding-bottom: 60px;
+}
+.story_left p{
+  font-size:1rem;
+  line-height:30px;
+  padding-bottom:90px;
+}
+.story_left > h2 img{
+width:40px;
+padding-right:10px;
+}
+.s_img{
+  width:360px;
+  float:right;
+  padding:100px 20px 0px 0px;
+}
+
+/* 인스타그램 */
+.instar{
+  padding-top: 50px;
+  padding:50px 0px;}
+
+.instar > h2{
+  text-align: center;
+  font-size:1.75rem;
+  color:#333;
+  font-weight: 300;
+  padding-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.id_name{
+  display:block;
+  text-transform: lowercase;
+  font-size: 1rem;
+  padding:10px 0px;
+}
+
+h2 img{width:40px;
+  transform:translateY(10px);
+}
+
+.gallery{
+  display: grid;
+  grid-gap: 10px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, 200px);
+  padding-bottom: 50px;
+}
+.gallery li{
+  overflow: hidden;
+}
+
+.gallery li:nth-child(9) ~ li{
+  display:none;
+}
+
+  /* 푸터 */
+  .f_info, .f_nav, address{width:100%;}
+
+  .f_nav{width:100%;}
+  .f_lnb{width:32%;}
+  .f_lnb li{margin:0px 0.5%;}
+  .f_nav dl{
+    width:60%;
+    font-size:0.875rem;
+  }
+  .f_nav dl dd > span{padding-left:10px;}
+
+  /* 푸터인포 */
+  .f_info{
+    width:100%;
+  }
+  .f_info dd{
+    font-size:1.125rem;
+    color:rgb(233, 232, 232);
+    line-height: 230%;
+  }
+
+  .number{
+    font-size: 1.5rem;
+  }
+  footer dl{width:70%}
+  .f_info .number + p{
+    font-size: 1rem;
+  }
+
+.sns, .siteurl{
+  position:absolute;
+  right:5%;
+}
+
+.sns{
+  top:50px;
+}
+address{padding:2%;}
+
+
+
+
+}
